@@ -20,7 +20,7 @@ description: AdA 2019
 
 # List of links in the navigation bar
 navbar-links:
-  Honey Flux Map: "map"
+  Honey Flux Map: "https://indigo-vanguard.github.io/exportations_graph/main/html/honey_graph.html"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
