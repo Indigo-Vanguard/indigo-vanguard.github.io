@@ -1,0 +1,222 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.pimgpaths, .pimgcluster, .pimgredpaths, .pimglinkinfo, .pimgpathwv, .pimgrouterclick, .pimgrouterinfo,
+.pimgspirale, .pimgpaths2, .pimgworldmap {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /*
+      fixed = parallax
+      scroll = normal
+    */
+    background-attachment: fixed;
+}
+
+.button {
+    background-color: dodgerblue; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor:pointer;
+}
+button:hover{
+    background-color:blue;
+}
+
+.pimgpaths {
+    background-image: url('../../images/paths.png');
+    min-height: 100%;
+}
+
+.pimgpaths2 {
+    background-image: url('../../images/paths.png');
+    min-height: 500px;
+}
+
+.pimgworldmap {
+    background-image: url('../../images/worldmap.png');
+    min-height: 500px;
+}
+
+.pimgcluster {
+    background-image: url('../../images/cluster.png');
+    min-height: 500px;
+}
+
+.pimgredpaths {
+    background-image: url('../../images/redpaths.png');
+    min-height: 500px;
+}
+
+.pimglinkinfo {
+    background-image: url('../../images/linkinfo.png');
+    min-height: 500px;
+}
+
+.pimgpathwv {
+    background-image: url('../../images/pathwv.png');
+    min-height: 500px;
+}
+
+.pimgrouterclick {
+    background-image: url('../../images/routerclick.png');
+    min-height: 500px;
+}
+
+.pimgrouterinfo {
+    background-image: url('../../images/routerinfo.png');
+    min-height: 500px;
+}
+
+.pimgspirale {
+    background-image: url('../../images/Spirale.png');
+    min-height: 100%;
+}
+
+.pimglogo {
+    background-image: url("../../images/Logo_EPFL.png");
+    position: relative;
+    opacity: 0.70;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.container {
+    width: 200px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* resize images */
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext2 {
+    position: absolute;
+    bottom: 100px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 27px;
+    text-transform: uppercase;
+    color: black;
+    background-color: rgba(255,255,255,.5);
+}
+
+.ptext .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.border.op {
+    background-color: rgba(255,255,255,.5);
+}
+
+.ptext .border.trans {
+    background-color: transparent;
+}
+
+@media (max-width: 568px) {
+    .pimgpaths, .pimgcluster, .pimgredpaths, .pimglinkinfo, .pimgpathwv, .pimgrouterclick, .pimgrouterinfo,
+    .pimgspirale, .pimglogo, .pimgpaths2, .arrow_container, .pimgworldmap {
+        background-attachment: scroll;
+    }
+}
+
+.arrow_container {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%,0);
+    color: white;
+    font-size: 8em;
+
+}
+
+a:link{
+    color:dodgerblue;
+}
+a:visited{
+    color:dodgerblue;
+}
+a:hover{
+    color:blue;
+}
+a:active{
+    color:dodgerblue;
+}
+a {text-decoration: none; }
+
+.arrow {
+    width: 100px;
+    height: 80px;
+    background-image: url("../../images/arrow.png");
+    background-size: 100px 80px;
+    background-repeat: no-repeat;
+    animation: bounce 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+    50% {-webkit-transform: translateY(-20px);}
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-20px);}
+}
+

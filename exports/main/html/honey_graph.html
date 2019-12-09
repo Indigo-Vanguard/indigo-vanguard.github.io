@@ -1,0 +1,386 @@
+<!-- This application was made with the Leaflet library more specifically with the leaflet-dvs one.
+A big part of the graphical part was taken in their github: https://github.com/humangeo/leaflet-dvf/tree/master/examples.
+If you want more information, please check their wiki: https://github.com/humangeo/leaflet-dvf/wiki.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Honey Graph</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--  -->
+    <link href="../../dist/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style>
+
+        /* Add Background pattern on the map */
+        #map {
+            background-image: url('../data/background_img.png');
+        }
+
+        /* Give opacity to the background pattern (in order to see the pattern and the map) */
+        #map div.leaflet-tile-pane {
+            opacity: 0.4;
+        }
+
+        div.leaflet-control-legend {
+            width: 400px;
+            max-height: 80px;
+        }
+
+        .legend-line {
+            margin-bottom: 20px;
+        }
+
+        /* Handle the legend which appears when the mouse is over a link*/
+        .legend-line div.scale-bars i {
+            background: none !important;
+            width: 0px;
+            height: 0px !important;
+            vertical-align: middle;
+            border-left: none !important;
+        }
+
+        .line-legend .legend-box {
+            width: 0px;
+            height: 0px !important;
+            border-top: none !important;
+            border-right: none !important;
+        }
+
+        .info {
+            padding: 6px 8px;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .info h4 {
+            margin: 0 0 5px;
+            color: #777;
+        }
+
+        .legend {
+            line-height: 18px;
+            color: #555;
+        }
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+
+    </style>
+
+    <!-- Library used to display the map -->
+    <link rel="stylesheet" href="../../dist/css/leaflet.css"  />
+    <!-- Library used to display a graph on a map -->
+    <link rel="stylesheet" href="../../dist/css/dvf.css" type="text/css" media="screen"/>
+    <!-- Personal css style for display the map (e.g. remove the borders of the map ...) -->
+    <link rel="stylesheet" href="../../dist/css/style.css" type="text/css" media="screen"/>
+    <!-- Library used to group routers when we zoom-out (color circles) -->
+    <link rel="stylesheet" href="../../dist/css/MarkerCluster.css" />
+    <link rel="stylesheet" href="../../dist/css/MarkerCluster.Default.css" />
+    <!-- Library used to correctly display the server icon-->
+    <link href="../../dist/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div id="map"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="../../dist/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../dist/js/leaflet.js"></script>
+<script src="../../dist/js/leaflet.markercluster.js"></script>
+<script type="text/javascript" src="../../dist/js/tile.stamen.js"></script>
+<script type="text/javascript" src="../data/countries.js"></script>
+<script type="text/javascript" src="../data/exportations.js"></script>
+<script type="text/javascript" src="../../dist/leaflet-dvf.js"></script>
+
+<script type="text/javascript">
+
+
+    /* Create the map*/
+    $(document).ready(function () {
+        var map;
+        var $map = $('#map');
+        var resize = function () {
+            $map.height($(window).height());
+
+            if (map) {
+                map.invalidateSize();
+            }
+        };
+
+        /* Resize the map when needed*/
+        $(window).on('resize', function () {
+            resize();
+        });
+
+        resize();
+
+        var southWest = L.latLng(-89.98155760646617, -180),
+            northEast = L.latLng(89.99346179538875, 180);
+        var bounds = L.latLngBounds(southWest, northEast);
+
+        /* Initialize the map by setting the map origin on the NAL*/
+        map = L.map('map', {
+            minZoom: 2, maxBounds: bounds, maxZoom: 13
+        }).setView([46.518516, 6.561727], 4);
+
+
+
+        var info = L.control();
+
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+            this.update();
+            return this._div;
+        };
+
+// method that we will use to update the control based on feature properties passed
+        info.update = function (props, value) {
+            this._div.innerHTML = '<h4>Exportation of honey</h4>' +  (props ?
+                '<b>' + props.name + '</b><br />' + value + ' tonnes'
+                : 'Hover over a country');
+        };
+
+        info.addTo(map);
+
+
+        function getColor(d) {
+            return d > 100000 ? '#800026' :
+                d > 10000 ? '#BD0026' :
+                    d > 1000  ? '#E31A1C' :
+                        d > 100  ? '#FC4E2A' :
+                            d > 10   ? '#FD8D3C' :
+                                d > 1   ? '#FEB24C' :
+                                    d > 0   ? '#FED976' :
+                                        '#999999';
+        }
+
+
+        var legend = L.control({position: 'bottomleft'});
+
+        legend.onAdd = function (map) {
+
+            var div = L.DomUtil.create('div', 'info legend'),
+                grades = [0, 1, 10, 100, 1000, 10000, 100000],
+                labels = [];
+            div.innerHTML = '<center><h4>Exportation <br>of honey<br> in tonnes</h4></center>';
+            // loop through our density intervals and generate a label with a colored square for each interval
+            for (var i = 0; i < grades.length; i++) {
+                div.innerHTML +=
+                    '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+            }
+
+            return div;
+        };
+
+        legend.addTo(map);
+
+
+
+
+        function style(feature) {
+            return {
+                fillColor: getColor(feature.value),
+                weight: 2,
+                opacity: 1,
+                dashArray: '3',
+                fillOpacity: 0.7
+            };
+        }
+
+        function highlightFeature(e) {
+            var layer = e.target;
+            info.update(layer.feature.properties, layer.feature.value);
+        }
+
+        function resetHighlight(e) {
+            info.update();
+        }
+
+        function zoomToFeature(e) {
+            map.fitBounds(e.target.getBounds());
+        }
+
+
+
+        // Add the Stamen toner tiles as a base layer for the map
+        var baseLayer = new L.StamenTileLayer('toner', {
+            detectRetina: true
+        }).addTo(map);
+
+
+        var country = null;
+        // Get a router (vertex) location. (callback is unused but needed in the function signature)
+        var getLocation = function (context, locationField, fieldValues, callback) {
+
+            var latlng = null;
+            for (var i = 0; i < countries.length; i++){
+                // look for the entry with a matching `code` value
+                if (countries[i].properties.name == fieldValues[0]){
+                    //console.log(countries[i].location)
+                    latlng = new L.LatLng(Number(countries[i].location[1]), Number(countries[i].location[0]));
+                    break;
+                }
+            }
+            //console.log(fieldValues[0]);
+            var key = fieldValues[0];
+           // var vertex = verticesLookup[key];
+            var location =  {
+                location: latlng,
+                text: key,
+                center: latlng
+            };
+//
+            //if (vertex) {
+            // //   var latlng = new L.LatLng(Number(vertex.lat), Number(vertex.lon));
+//
+            //    location = {
+            //        location: latlng,
+            //        text: key,
+            //        center: latlng
+            //    };
+            //}
+
+            return location;
+        };
+
+
+        var maxCount = -1;
+        var minCount = 100;
+        for (var i = 0; i < exportations.length; i++){
+            // look for the entry with a matching `code` value
+            if (exportations[i].Value>maxCount){
+                //console.log(countries[i].location)
+                maxCount = exportations[i].Value;
+            }
+            if (exportations[i].Value<minCount){
+                //console.log(countries[i].location)
+                minCount = exportations[i].Value;
+            }
+        }
+        maxCount /= 10;
+        minCount;
+
+        /* Handle the graphical options of the graph */
+        var options = {
+            recordsField: null,
+            locationMode: L.LocationModes.CUSTOM,
+            fromField: 'from',
+            toField: 'to',
+            codeField: null,
+            getLocation: getLocation,
+            getEdge: L.Graph.EDGESTYLE.ARC,
+            includeLayer: function (record) {
+                return false;
+            },
+            getIndexKey: function (location, record) {
+                return record.from + '_' + record.to;
+            },
+            // The link is green when the mouse is over.
+            setHighlight: function (style) {
+                style.opacity = 1.0;
+
+                return style;
+            },
+            // The link is more transparent when the mouse is not over.
+            unsetHighlight: function (style) {
+                style.opacity = 0.9;
+
+                return style;
+            },
+            //edge option
+            layerOptions: {
+                fill: false,
+                opacity: 0.9,
+                weight: 0.5,
+                fillOpacity: 1.0,
+                distanceToHeight: new L.LinearFunction([0, 20], [1000, 300]),
+                markers: {
+                    end: true
+                },
+                // Q stands for quadratic
+                mode: 'Q'
+            },
+            legendOptions: {
+                width: 200,
+                numSegments: 5,
+                className: 'legend-line'
+            },
+            //Click on edge option
+            tooltipOptions: {
+                iconSize: new L.Point(80, 94),
+                iconAnchor: new L.Point(-5, 64),
+                className: 'leaflet-div-icon line-legend'
+            },
+            displayOptions: {
+                "Value" : {
+                    weight: 2,
+                    color: new L.HSLHueFunction(new L.Point(minCount,0), new L.Point(maxCount,200), {
+                        outputLuminosity: '60%'
+                    }),
+                displayName: 'Exportations in tonnes (for arrows):'
+            }},
+            onEachRecord: function (layer, record) {
+                layer.bindPopup($(L.HTMLUtils.buildTable(record)).wrap('<div/>').parent().html());
+            }
+        };
+
+        legendControl = new L.Control.Legend();
+
+        legendControl.addTo(map);
+
+
+        // add the graph to the map
+        var allLayer = new L.Graph(exportations, options);
+        map.addLayer(allLayer);
+
+
+        function links_creation(e) {
+            var layer = e.target;
+
+            allLayer.options.includeLayer = function (newRecord) {
+                return newRecord.from === layer.feature.properties.name;
+            };
+            allLayer.reloadData();
+        }
+
+        function onEachFeature(feature, layer) {
+            layer.on({
+                mouseover: highlightFeature,
+                mouseout: resetHighlight,
+                click : links_creation
+            });
+        }
+
+        L.geoJson(countries, {
+            style: style,
+            onEachFeature: onEachFeature
+        }).addTo(map);
+
+
+
+
+
+
+
+
+
+    });
+</script>
+</body>
+</html>
