@@ -7,6 +7,6 @@ title: There is No Plan Bee Without Them
 
 We will explain everything in due time.
 
-{% include _includes/dist/main/html/honey_graph.html %}
+{% include dist/main/html/honey_graph.html %}
 
 # Beehives and Honey Production
