@@ -23,6 +23,9 @@ title: There is No Plan Bee Without Them
     - Scatterplot x: import as a percentage of consumption, y: export as a percentage of production, size: production, color: continent, animation through years See [here](https://plot.ly/python/animations/) (Eric)
     - We cluster the scatter plot to highlight x types of countries (e.g. self-sufficient ones)
     - Eric's map
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="https://indigo-vanguard.github.io/exportations_graph/main/html/honey_graph.html"></iframe>
+
 3. We noticed countries that exported a lot. Are there issues with them ? (Hopefully yes) (Tim)
     - Heatmap ratio honey prod / beehives, slider over time
 
