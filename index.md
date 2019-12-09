@@ -17,16 +17,16 @@ title: There is No Plan Bee Without Them
 - Segue: The influence on the world honey economy
 
 # Economy of honey production in the world
-1. How do countries exploit their behives ? (Robin)
+- How do countries exploit their behives ? (Robin)
     - Bubble plot (y: honey prod, x: amount beehive) of countries (color = continent ?) per year (slider + animation). See [here](https://plot.ly/python/animations/)
-2. What are the import/export patterns ?
+- What are the import/export patterns ?
     - Scatterplot x: import as a percentage of consumption, y: export as a percentage of production, size: production, color: continent, animation through years See [here](https://plot.ly/python/animations/) (Eric)
     - We cluster the scatter plot to highlight x types of countries (e.g. self-sufficient ones)
     - Eric's map
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="https://indigo-vanguard.github.io/exportations_graph/main/html/honey_graph.html"></iframe>
 
-3. We noticed countries that exported a lot. Are there issues with them ? (Hopefully yes) (Tim)
+- We noticed countries that exported a lot. Are there issues with them ? (Hopefully yes) (Tim)
     - Heatmap ratio honey prod / beehives, slider over time
 
 # Conclusion
