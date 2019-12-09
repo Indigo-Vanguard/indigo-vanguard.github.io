@@ -12,7 +12,7 @@ If you want more information, please check their wiki: https://github.com/humang
 
 
     <!--  -->
-    <link href="../../dist/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="../../dist/lib/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
     <style>
 
         /* Add Background pattern on the map */
@@ -251,20 +251,9 @@ If you want more information, please check their wiki: https://github.com/humang
                 text: key,
                 center: latlng
             };
-//
-            //if (vertex) {
-            // //   var latlng = new L.LatLng(Number(vertex.lat), Number(vertex.lon));
-//
-            //    location = {
-            //        location: latlng,
-            //        text: key,
-            //        center: latlng
-            //    };
-            //}
 
             return location;
         };
-
 
         var maxCount = -1;
         var minCount = 100;
@@ -282,8 +271,35 @@ If you want more information, please check their wiki: https://github.com/humang
         maxCount /= 10;
         minCount;
 
+        function getArrowColor(d) {
+            return d > 10000 ? '#001969' :
+                    d > 1000  ? '#364286' :
+                        d > 100  ? '#586da3' :
+                            d > 10   ? '#789bc1' :
+                                d > 1   ? '#97cce0' :
+                                    d > 0   ? '#b7ffff' :
+                                        '#105f40';
+        }
 
-        var colorFunction = new L.CustomColorFunction(1, 35000, L.ColorBrewer.Qualitative.Paired['6']);
+        var legend = L.control({position: 'bottomright'});
+
+        legend.onAdd = function (map) {
+
+            var div = L.DomUtil.create('div', 'info legend'),
+                grades = [0, 1, 10, 100, 1000, 10000],
+                labels = [];
+            div.innerHTML = '<center><h4>Exportation <br>of honey<br> in tonnes</h4></center>';
+            // loop through our density intervals and generate a label with a colored square for each interval
+            for (var i = 0; i < grades.length; i++) {
+                div.innerHTML +=
+                    '<i style="background:' + getArrowColor(grades[i] + 1) + '"></i> ' +
+                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+            }
+
+            return div;
+        };
+
+        legend.addTo(map);
 
         /* Handle the graphical options of the graph */
         var options = {
@@ -338,18 +354,14 @@ If you want more information, please check their wiki: https://github.com/humang
             },
             displayOptions: {
                 "Value" : {
-                    weight: 2,
-                    color: colorFunction,
+                    weight: 3,
+                    color: getArrowColor,
                 displayName: 'Exportations in tonnes (for arrows):'
             }},
             onEachRecord: function (layer, record) {
                 layer.bindPopup($(L.HTMLUtils.buildTable(record)).wrap('<div/>').parent().html());
             }
         };
-
-        legendControl = new L.Control.Legend();
-
-        legendControl.addTo(map);
 
         // add the graph to the map
         var allLayer = new L.Graph(exportations, options);
@@ -374,7 +386,6 @@ If you want more information, please check their wiki: https://github.com/humang
             country_layer.setStyle(style)
         }
 
-
         function links_creation(e) {
             var layer = e.target;
             country_name = layer.feature.properties.name;
@@ -382,7 +393,6 @@ If you want more information, please check their wiki: https://github.com/humang
                 return newRecord.from === country_name && newRecord.Year == year;
             };
             allLayer.reloadData();
-
 
         }
 
@@ -393,17 +403,6 @@ If you want more information, please check their wiki: https://github.com/humang
                 click : links_creation
             });
         }
-
-
-
-
-
-
-
-
-
-
-
     });
 </script>
 </body>

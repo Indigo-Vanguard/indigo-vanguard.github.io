@@ -1,0 +1,79 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#map {
+    width: 100%;
+}
+
+div.container-fluid {
+    padding: 0px;
+    margin: 0px;
+}
+
+#legend {
+	height: 100%;
+	overflow: auto;
+}
+
+.leaflet-control-layers label input {
+	margin-bottom: 2px;
+}
+.leaflet-control-layers label span {
+	vertical-align: text-top;
+}
+
+.leaflet-popup-content {
+	overflow: auto;
+	max-height: 300px;
+}
+
+.slidecontainer {
+	width: 100%;
+}
+
+.slider {
+	-webkit-appearance: none;
+    position:absolute;
+	width: 20%;
+	height: 10px;
+	border-radius: 5px;
+	background: #d3d3d3;
+    bottom:5%;
+	outline: none;
+    right:25%;
+    left:50%;
+    margin-left:-10%;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 27px;
+	height: 27px;
+	border: 0;
+	background: url('../../main/data/honeybee_1f41d.png');
+	cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	width: 27px;
+	height: 27px;
+	border: 0;
+	background: url('../../main/data/honeybee_1f41d.png');
+	cursor: pointer;
+}
