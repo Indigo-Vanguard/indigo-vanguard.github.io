@@ -24,7 +24,7 @@ title: There is No Plan Bee Without Them
     - We cluster the scatter plot to highlight x types of countries (e.g. self-sufficient ones)
     - Eric's map
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="https://indigo-vanguard.github.io/exportations_graph/main/html/honey_graph.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="https://indigo-vanguard.github.io/exportations_graph/main/html/honey_graph.html"></iframe>
 
 - We noticed countries that exported a lot. Are there issues with them ? (Hopefully yes) (Tim)
     - Heatmap ratio honey prod / beehives, slider over time
