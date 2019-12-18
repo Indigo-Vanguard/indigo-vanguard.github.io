@@ -109,7 +109,7 @@ The unit of measurement we use for import and export is the tonne of honey.
 
 Let the total amount of available honey in a country (Honey Capacity) be the the sum between its honey production and its imported honey. 
 
-To compare multiple countries, we will compute their import ($\text{Import Ratio} = \frac{\text{Honey Imports}}{\text{Honey Capacity}}$) and their export ratios ($\text{Export Ratio} = \frac{\text{Honey Exports}}{\text{Honey Capacity}}$)
+To compare multiple countries, we will compute their import ($$\text{Import Ratio} = \frac{\text{Honey Imports}}{\text{Honey Capacity}}$$) and their export ratios ($$\text{Export Ratio} = \frac{\text{Honey Exports}}{\text{Honey Capacity}}$$)
 
 We observed 3 different kind of countries:
 - The countries which **export** the greater part of their honey production (Argentina)
