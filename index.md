@@ -9,9 +9,9 @@ bigimg: img/bigbee.jpg
 ## Bees are dying
 #### What's up with that?
 
-For 20 years, bees have been dying all over the world at an alarming rate: **half of the colonies do not make it through the year** [1][2]. Entire hives are being deserted by their worker bees, leaving behind a lonely queen and plenty of food. Those same bees are vital to our agriculture and responsible for pollinating a third of our food [3]. Without them, the human race would last less than 5 years [4]. This mass extinction is known as **Colony Collapse Disorder (CCD)** and threatens our entire way of life, as well as theirs.
+For 20 years, bees have been dying all over the world at an alarming rate: **half of the colonies do not make it through the year** [^1][^2]. Entire hives are being deserted by their worker bees, leaving behind a lonely queen and plenty of food. Those same bees are vital to our agriculture and responsible for pollinating a third of our food [^3]. Without them, the human race would last less than 5 years [^4]. This mass extinction is known as **Colony Collapse Disorder (CCD)** and threatens our entire way of life, as well as theirs.
 
-Many factors are thought to be responsible for the bees' decline, among which pests, insecticides and other environmental stresses [5].
+Many factors are thought to be responsible for the bees' decline, among which pests, insecticides and other environmental stresses [^5].
 
 In this Data Story, we explore the death of bees, observe their impact on the world economy and bring to light the dirty tricks of the honey trade.
 
@@ -46,7 +46,7 @@ Clearly, in terms of the average death rate, all states are roughly equal. **Eve
 
 We notice something interesting: **California, Texas and North-Dakota experience much more collapsed colonies**. What makes those states so special?
 
-The fact is that beekeepers rely less and less on honey making, and more and more on **migratory beekeeping**. It represents now up to **50% of their revenue**. They pack their hives in boxes, mount them on trucks and scout the US throughout the year to pollinize fields, amongst which [6]:
+The fact is that beekeepers rely less and less on honey making, and more and more on **migratory beekeeping**. It represents now up to **50% of their revenue**. They pack their hives in boxes, mount them on trucks and scout the US throughout the year to pollinize fields, amongst which [^6]:
 
 - Almonds in **California** (February)
 - Alfalfa, clover and sunflowers in **North Dakota** (June / July) (Picture of the side with caption "For the uninitiated" )
@@ -54,9 +54,9 @@ The fact is that beekeepers rely less and less on honey making, and more and mor
 
 This migratory beekeeping explains the high death-count: the colonies die in _those_ places, because that's where they spend most of their life.
 
-This way of renting out hives and transporting them across an entire continent incurs high stresses on the bees, weakening them and exposing them to environmental parameters they are not used to. Additionally, now that bees can travel throughout the entire USA, their pest can as well**. This is exactly how the Varroa Destructor came to the USA/Europe in the first place, emigrating from Asia in the 70's [7].
+This way of renting out hives and transporting them across an entire continent incurs high stresses on the bees, weakening them and exposing them to environmental parameters they are not used to. Additionally, now that bees can travel throughout the entire USA, their pest can as well**. This is exactly how the Varroa Destructor came to the USA/Europe in the first place, emigrating from Asia in the 70's [^7].
 
-The main event of this migratory beekeeping is the blooming of California's almond orchards in February, gathering 31 billion honeybees within one single state [6].
+The main event of this migratory beekeeping is the blooming of California's almond orchards in February, gathering 31 billion honeybees within one single state [^6].
 
 But since the bees are dying, what becomes of the almond economy?
 
@@ -109,16 +109,16 @@ Studies show that the average beehive produces from 10 to 27 kg of honey annuall
 
 ## References
 
-[[1]](http://sos-bees.org/wp-content/uploads/2014/04/BeesInDecline.pdf)] Greenpeace, *Bees in Decline*, 2013
+[[^1]](http://sos-bees.org/wp-content/uploads/2014/04/BeesInDecline.pdf)] Greenpeace, *Bees in Decline*, 2013
 
-[[2]](https://www.thebalance.com/bee-colony-collapse-disorder-facts-and-economic-impact-3305815) The Balance, _Colony Collapse Disorder and Its Impact on the Economy_, 2019
+[[^2]](https://www.thebalance.com/bee-colony-collapse-disorder-facts-and-economic-impact-3305815) The Balance, _Colony Collapse Disorder and Its Impact on the Economy_, 2019
 
-[[3]](https://e360.yale.edu/features/declining_bee_populations_pose_a_threat_to_global_agriculture) YaleEnvironment360, _Declining Bee Populations Pose a Threat to Global Agriculture_, 2013
+[[^3]](https://e360.yale.edu/features/declining_bee_populations_pose_a_threat_to_global_agriculture) YaleEnvironment360, _Declining Bee Populations Pose a Threat to Global Agriculture_, 2013
 
-[[4]](https://www.vice.com/en_us/article/d7ezaq/what-would-happen-if-all-the-bees-died-tomorrow) Vice, _What Would Happen if All the Bees Went Extinct?_, 2017
+[[^4]](https://www.vice.com/en_us/article/d7ezaq/what-would-happen-if-all-the-bees-died-tomorrow) Vice, _What Would Happen if All the Bees Went Extinct?_, 2017
 
-[[5]]((http://www.fas.org/sgp/crs/misc/R43191.pdf)) Congressional Research Service, _Bee Health: Background and Issues for Congress_, 2015
+[[^5]]((http://www.fas.org/sgp/crs/misc/R43191.pdf)) Congressional Research Service, _Bee Health: Background and Issues for Congress_, 2015
 
-[[6]](https://www.scientificamerican.com/article/migratory-beekeeping-mind-boggling-math/) Scientific American, _The Mind-Boggling Math of Migratory Beekeeping_, 2013
+[[^6]](https://www.scientificamerican.com/article/migratory-beekeeping-mind-boggling-math/) Scientific American, _The Mind-Boggling Math of Migratory Beekeeping_, 2013
 
-[[7]](https://www.vatorex.ch/en/varroa-no-problem-meet-the-asian-honeybee/) Vatorex, _Varroa? No problem – Meet the Asian honeybee_, 2019
+[[^7]](https://www.vatorex.ch/en/varroa-no-problem-meet-the-asian-honeybee/) Vatorex, _Varroa? No problem – Meet the Asian honeybee_, 2019
