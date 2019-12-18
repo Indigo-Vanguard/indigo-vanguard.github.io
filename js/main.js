@@ -138,3 +138,23 @@ var main = {
 // 2fc73a3a967e97599c9763d05e564189
 
 document.addEventListener('DOMContentLoaded', main.init);
+
+window.addEventListener("load", (event) => {
+  let observer;
+
+  let options = {
+    root: null
+  };
+
+  observer = new IntersectionObserver(handleIntersect, options);
+  for (const sectionEl of document.querySelectorAll(".withSidenote"))
+    observer.observe(sectionEl)
+})
+
+function handleIntersect(entries) {
+  for (const entry of entries) {
+    const noteEl = entry.target.querySelector(".sidenote");
+    if (entry.isIntersecting) noteEl.classList.add("display")
+    else noteEl.classList.remove("display")
+  }
+};
