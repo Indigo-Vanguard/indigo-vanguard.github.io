@@ -9,7 +9,7 @@ bigimg: img/bigbee.jpg
 ## Bees are dying
 #### What's up with that?
 
-For 20 years, bees have been dying all over the world at an alarming rate: **half of the colonies do not make it through the year** [^1][^2]. Entire hives are being deserted by their worker bees, leaving behind a lonely queen and plenty of food. Those same bees are vital to our agriculture and responsible for pollinating a third of our food [^3]. Without them, the human race would last less than 5 years [^4]. This mass extinction is known as **Colony Collapse Disorder (CCD)** and threatens our entire way of life, as well as theirs.
+For 20 years, bees have been dying all over the world at an alarming rate: **half of the colonies do not make it through the year** [^1] [^2]. Entire hives are being deserted by their worker bees, leaving behind a lonely queen and plenty of food. Those same bees are vital to our agriculture and responsible for pollinating a third of our food [^3]. Without them, the human race would last less than 5 years [^4]. This mass extinction is known as **Colony Collapse Disorder (CCD)** and threatens our entire way of life, as well as theirs.
 
 Many factors are thought to be responsible for the bees' decline, among which pests, insecticides and other environmental stresses [^5].
 
