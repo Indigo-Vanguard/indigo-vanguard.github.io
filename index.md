@@ -86,7 +86,7 @@ We observed 3 different kind of countries:
 
 We observe that the world is split between honey producers and consumers. Western countries seem to have had production issues in the last decades while other countries became big exporters.
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="auto" src="https://indigo-vanguard.github.io/exportations_graph/main/html/honey_graph.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="https://indigo-vanguard.github.io/exportations_graph/main/html/honey_graph.html"></iframe>
 
 Click on countries in order to see important links between them through years.
 
@@ -96,7 +96,7 @@ We observed the same phenomenon mentioned above, namely the emergence of major e
 ## Productivity of beehives
 #### How do countries exploit their beehives?
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="650" allowfullscreen="true" src="https://indigo-vanguard.github.io/scatterplot_beehives_production.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="650" src="https://indigo-vanguard.github.io/plot/scatterplot_beehives_production.html"></iframe>
 
 
 Studies show that the average beehive produces from 10 to 27 kg of honey annually (citation needed). The above scatter plot shows, using the [Food and Agriculture Organization](http://www.fao.org/faostat/en/)'s data sets, how the honey production behaves against the number of beehives per county. The green zone shows the aforementioned average zone of production. We see that most countries 
