@@ -109,16 +109,16 @@ Studies show that the average beehive produces from 10 to 27 kg of honey annuall
 
 ## References
 
-[[^1]](http://sos-bees.org/wp-content/uploads/2014/04/BeesInDecline.pdf)] Greenpeace, *Bees in Decline*, 2013
+[^1]: [Greenpeace, *Bees in Decline*, 2013](http://sos-bees.org/wp-content/uploads/2014/04/BeesInDecline.pdf)
 
-[[^2]](https://www.thebalance.com/bee-colony-collapse-disorder-facts-and-economic-impact-3305815) The Balance, _Colony Collapse Disorder and Its Impact on the Economy_, 2019
+[^2]: [The Balance, _Colony Collapse Disorder and Its Impact on the Economy_, 2019](https://www.thebalance.com/bee-colony-collapse-disorder-facts-and-economic-impact-3305815)
 
-[[^3]](https://e360.yale.edu/features/declining_bee_populations_pose_a_threat_to_global_agriculture) YaleEnvironment360, _Declining Bee Populations Pose a Threat to Global Agriculture_, 2013
+[^3]: [YaleEnvironment360, _Declining Bee Populations Pose a Threat to Global Agriculture_, 2013](https://e360.yale.edu/features/declining_bee_populations_pose_a_threat_to_global_agriculture)
 
-[[^4]](https://www.vice.com/en_us/article/d7ezaq/what-would-happen-if-all-the-bees-died-tomorrow) Vice, _What Would Happen if All the Bees Went Extinct?_, 2017
+[^4]: [Vice, _What Would Happen if All the Bees Went Extinct?_, 2017](https://www.vice.com/en_us/article/d7ezaq/what-would-happen-if-all-the-bees-died-tomorrow)
 
-[[^5]]((http://www.fas.org/sgp/crs/misc/R43191.pdf)) Congressional Research Service, _Bee Health: Background and Issues for Congress_, 2015
+[^5]: [Congressional Research Service, _Bee Health: Background and Issues for Congress_, 2015](http://www.fas.org/sgp/crs/misc/R43191.pdf)
 
-[[^6]](https://www.scientificamerican.com/article/migratory-beekeeping-mind-boggling-math/) Scientific American, _The Mind-Boggling Math of Migratory Beekeeping_, 2013
+[^6]: [Scientific American, _The Mind-Boggling Math of Migratory Beekeeping_, 2013](https://www.scientificamerican.com/article/migratory-beekeeping-mind-boggling-math/)
 
-[[^7]](https://www.vatorex.ch/en/varroa-no-problem-meet-the-asian-honeybee/) Vatorex, _Varroa? No problem – Meet the Asian honeybee_, 2019
+[^7]: [Vatorex, _Varroa? No problem – Meet the Asian honeybee_, 2019](https://www.vatorex.ch/en/varroa-no-problem-meet-the-asian-honeybee/)
