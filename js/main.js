@@ -143,7 +143,8 @@ window.addEventListener("load", (event) => {
   let observer;
 
   let options = {
-    root: null
+    root: null,
+    rootMargin: '-25% 0px -50% 0px'
   };
 
   observer = new IntersectionObserver(handleIntersect, options);

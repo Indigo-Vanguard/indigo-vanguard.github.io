@@ -21,11 +21,11 @@ In this Data Story, we explore the death of bees, observe their impact on the wo
 
 First of all, experts claim that those deaths can't be explained by a single cause. Are all the experts wrong? Have they overlooked an obvious correlation fully explaining the bees' death? (Spoiler: They haven't)
 
+<div class="withSidenote" markdown="1">
 We investigate here two widely agreed upon causes of CCD: pests and insecticides.
 
 One of those pests -- the (charmingly named) **Varroa destructor** -- is a parasite a bit smaller than the bee that attaches itself on the bee's body. It spreads throughout the colonies and leads to infections, killing the bees. Hence, we also isolate the influence of the Varroa infestation on the death rate of colonies.
 
-<div class='withSidenote'>
 <figure class="sidenote">
     <img src="https://indigo-vanguard.github.io/img/varroa_annotated.png">
     <figcaption>Figure 1. The Varroa destructor in action !</figcaption>
@@ -53,14 +53,13 @@ Clearly, in terms of the average death rate, all states are roughly equal: **Eve
 
 We notice something interesting: **California, Texas and North-Dakota experience much more collapsed colonies**. What makes those states so special?
 
-
+<div class="withSidenote" markdown="1">
 The fact is that beekeepers rely less and less on honey making, and more and more on **migratory beekeeping**. It represents now up to **50% of their revenue**. They pack their hives in boxes, mount them on trucks and scout the US throughout the year to pollinize fields, amongst which[^6]:
 
 - **Almonds** in **California** (February)
 - **Alfalfa**, **clover** and **sunflowers** in **North Dakota** (June / July) (Picture of the side with caption "For the uninitiated" )
 - **Pumpkins** in **Texas** (October)
 
-<div class='withSidenote'>
 <figure class="sidenote">
     <img src="https://indigo-vanguard.github.io/img/alfalalafa.jpg">
     <figcaption>Figure 2. We bet you didn't know about Alfalfa, because we didn't 😋</figcaption>
