@@ -90,30 +90,23 @@ As the state will surely experience more frequent and severe drought, there will
 ## Bees-ness
 #### World-wide honey trade
 
-Often consumed locally, honey has become a raw material exported throughout the world.
-A trend has emerged in recent years: countries that were able to produce enough honey for their own consumption can no longer do so.
+Let's now focus on the other main revenue of a beekeeper, **honey**. Often consumed locally, honey has become a raw material exported throughout the world. But how is this precious ressource exported and imported around the globe? We give a look at honey trade using [data](http://www.fao.org/faostat/en/#data/TM) from the **Food and Agriculture organization of the United Nations (FAO)**.
 
-The unit of measurement we use for import and export is the tonne of honey.
-
-Let the total amount of available honey in a country (Honey Capacity) be the the sum between its honey production and its imported honey. 
-
-To compare multiple countries, we will compute their import and their export ratios.
-
-We observed 3 different kind of countries:
-- The countries which **export** the greater part of their honey production (Argentina)
-- The countries which **import** the greater part of their honey (United Kingdom, Japan)
-- The countries which **use** the greater part of their honey (China)
-
-We observe that the world is split between honey producers and consumers. Western countries seem to have had production issues in the last decades while other countries became big exporters.
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="exportations_graph/main/html/honey_graph.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="550" allowfullscreen="true" src="exportations_graph/main/html/honey_graph.html"></iframe>
 
 Click on countries in order to see important links between them through years.
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="650" src="plot/beezness_plot.html"></iframe>
+By toggeling between the imports and exports we can identify a first trend. There are countries that **export a lot**: China, Argentina, Ukraine and India and those that **import a lot**: USA, Germany, Japan. Can we find a way to cluster the countries? To do so we devise a new value called the *Honey Capacity* by letting it be the total amount of available honey in a country. For each nation, the capacity is computed as the sum between its honey production and its imported honey. In order to compare the countries, we also compute their import and export ratios with respect to their capacity.
 
-We observed the same phenomenon mentioned above, namely the emergence of major exporters (India, Ukraine) but also the ever-increasing dependence of Western countries (France, United States) on these exporters.
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="620" src="plot/beezness_plot.html"></iframe>
+NOTE for 20.12: Change title to match other plots (and 2 lines). Change color of honey exporters
 
+At the end of the animation, we can actually observe not 2 but 3 different clusters of countries:
+- The countries which **export** the greater part of their honey production (such as Argentina and Ukraine)
+- The countries which **import** the greater part of their honey (such as the United Kingdom, the USA and Japan)
+- The countries which **use** the greater part of their honey (such as China)
+
+This leads us to observe that the world is split between honey producers and consumers. Western countries seem to have production issues in the last decades while other countries became big exporters. This clear trend has emerged during the animation: developed countries that were able to **produce enough honey** for their own consumption **can no longer do so** and have to rely on other nations to satisfy their local demand.
 
 ## Productivity of beehives
 #### How do countries exploit their beehives?
