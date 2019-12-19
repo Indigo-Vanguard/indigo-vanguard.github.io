@@ -108,15 +108,38 @@ At the end of the animation, we can actually observe not 2 but 3 different clust
 
 This leads us to observe that the world is split between honey producers and consumers. Western countries seem to have production issues in the last decades while other countries became big exporters. This clear trend has emerged during the animation: developed countries that were able to **produce enough honey** for their own consumption **can no longer do so** and have to rely on other nations to satisfy their local demand.
 
-## Productivity of beehives
-#### How do countries exploit their beehives?
+## Shedding the light on dirty honey tricks
+#### On the (hyper-)productivity of beehives
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="650" src="plot/scatterplot_beehives_production.html"></iframe>
+With such a juicy market at hand, are all countries playing fair and square or are some squeezing more out of their beehives and trading partners than they should? In order to check that we look at the production of honey using [data](http://www.fao.org/faostat/en/) from the FAO. As studies show, the average beehive produces from 10 to 40 kg of honey annually[^9][^10] and this acceptable range is represented in green.
 
-Studies show that the average beehive produces from 10 to 40 kg of honey annually[^9] [^10]. The above scatter plot shows, using the [Food and Agriculture Organization](http://www.fao.org/faostat/en/)'s data sets, how the honey production behaves against the number of beehives per country. The green zone shows the aforementioned average zone of production. We see that a few countries, e.g. India, are well under the average production. Indeed, different types of honeybees exist, and they do not have the same rate of production [^10]. Most other countries, like France or the USA, seem to behave according to the average. However, we note that some countries (Ukraine, Latvia, Belarus, Rwanda, etc.) are way off, and show impossible production rates. We notice that 3 of them were in the USSR and show these counts since their independence in 1991 (they appear in 1992 in the graph). This can be explained by either dubious internal counts, or non official data. China shows another interesting behavior. It starts in 1990 by being well into the average zone, but then slowly climbs out of it. It now has an abnormal production rate. Something fishy is happening here... Is that happening in other countries as well?
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="650" src="https://indigo-vanguard.github.io/plot/scatterplot_beehives_production.html"></iframe>
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="650" src="plot/honey_productivity.html"></iframe>
+<div class="withSidenote" markdown="1">
 
+We see that a few countries, e.g. India, are well under the average production. Indeed, India as his own kind of honeybee, and they do not have the same rate of production [^10]. Most other countries, like France or the USA, seem to behave according to the average. However, we note that some countries (Ukraine, Latvia, Belarus, Rwanda, etc.) are way off, and show impossible production rates. We notice that three of them were in the USSR and show these counts since their independence in 1991 (they appear in 1992 in the graph). This can be explained by either dubious internal counts and non official or missing data, especially for African countries.
+
+<figure class="sidenote">
+    <img src="https://indigo-vanguard.github.io/img/apiscerana.jpg">
+    <figcaption><em>Figure 3.</em> A less fluffy and smaller version of the European honneybee, the <em>Apis Cerana Indica</em> lives in colonies of a few thousands workers compared to the average fifty thousand for <em>Apis Mellifera</em></figcaption>
+</figure>
+</div>
+
+But we are still missing the elephant in the room. China shows a strange behavior. It starts in 1990 by being well into the average zone, but then slowly climbs out of it. From 2005 to 2017, the number of **beehives only increased by 10%**, where as its **honey production jumped by more than 80%**. Something fishy is happening here... Is this _hyper_-productivity phenomenon happening in other countries as well?
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="650" src="https://indigo-vanguard.github.io/plot/honey_productivity.html"></iframe>
+
+<div class="withSidenote" markdown="1">
+
+Two bright red dots appear since the beginning of the animation, in Canada and Australia. At first, we were wondering if beekeepers were feeding Maple syrup and Vegemite, respectively, to their bees to increase their productivity. It turns out that the wide meadows and longer days allow for more productive foraging and a higher yield[^beekeeping_canada].
+
+<figure class="sidenote">
+    <img src="https://indigo-vanguard.github.io/img/vegemite.jpg">
+    <figcaption><em>Figure 4.</em> Vegemite is an Australian delicacy comparable to our Cenovis. If you haven't had one of them yet, give it a try 😉</em></figcaption>
+</figure>
+</div>
+
+So let's focus on what is going on in Asia. As we mentioned, their productivity boomed in the recent years to fill in the gap left by other bees around the developed world. But is it really possible to increase the productivity to this extend or did we uncover something.
 
 
 ## Conclusion
