@@ -164,8 +164,16 @@ So let's focus on what is going on in Asia. As we mentioned, their productivity 
 
 [^7]: [Vatorex, _Varroa? No problem – Meet the Asian honeybee_, 2019](https://www.vatorex.ch/en/varroa-no-problem-meet-the-asian-honeybee/)
 
-[^8]: [Almond Board of California, _Almond Almanac_, 2018](http://www.almonds.com/sites/default/files/Almond_Almanac_2018_F_revised.pdf)
+[^almond_almanac]: [Almond Board of California, _Almond Almanac_, 2018](http://www.almonds.com/sites/default/files/Almond_Almanac_2018_F_revised.pdf)
 
-[^9]: [Kim Flottum, U.S. Honey Industry Report – 2017, 2018](https://www.beeculture.com/u-s-honey-industry-report-2017/)
+[^9]: [Kim Flottum, _U.S. Honey Industry Report 2017_, 2018](https://www.beeculture.com/u-s-honey-industry-report-2017/)
 
-[^10]: [TNAU Agritech, Types of Honey Bee](http://agritech.tnau.ac.in/farm_enterprises/fe_api_typesofhoneybee.html)
+[^10]: [TNAU Agritech, _Types of Honey Bee_, 2014](http://agritech.tnau.ac.in/farm_enterprises/fe_api_typesofhoneybee.html)
+
+[^lack_bee]: [Los Angeles Time, _For Almond Growers, Honeybee Shortage Is a Hard Nut to Crack_, 2005](https://www.latimes.com/archives/la-xpm-2005-may-07-fi-almonds7-story.html)
+
+[^bee_practice]: [California Almond Board, _Honey Bee best Management Practices_, 2014](http://www.almonds.com/pollination)
+
+[^drought]: [Growing Produce, _Impacts Of Drought On Almond Production_, 2014](https://www.growingproduce.com/fruits/impacts-of-drought-on-almond-production/)
+
+[^beekeeping_canada]: [Apimondia, _beekeeping in Canada_, 2019](https://www.apimondia2019.com/beekeeping-in-canada/)
