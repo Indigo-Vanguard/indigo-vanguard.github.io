@@ -73,12 +73,19 @@ The main event of this migratory beekeeping is the blooming of California's almo
 ## The life of an American bee in February
 #### An almond love story
 
-Strapped on lorries, more than a million hives arrive in California around Valentine's day. Their little dwellers will work hard for the next few weeks in the hundred of thousands of hectares of almond orchards in Central Valley. Buzzing from flower to flower, they play an essential role in pollinating the almond trees, while gathering pollen to feed the colony after a harsh winter. Those orchards produce about 80% of the world almonds and it's one of the main crop grown in the state[^8]. The work of the honeybees in the field bring back the beekeepers **250 to 290 millions dollars** anually. But since we have shown that bees are dying *en masse*, how does this impact the almond production ?
+Strapped on lorries, more than a million hives arrive in California around Valentine's day. Their little dwellers will work hard for the next few weeks in the hundred of thousands of hectares of almond orchards in Central Valley. Buzzing from flower to flower, they play an essential role in pollinating the almond trees. Those orchards produce about 80% of the world almonds and it's one of the main crop grown in the state[^almond_almanac]. The work of the honeybees in the field bring back the beekeepers **250 to 290 millions dollars** anually. But since we have shown that bees are dying *en masse*, how does this impact the almond production using [data](https://quickstats.nass.usda.gov/results/2373C039-2CFF-3744-A554-328E6A79BD39) from the USDA?
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="plot/california_almond.html"></iframe>
 
-First, we can see that the bearing area is strictly increasing. This reinforce the idea that the industry has become more and more popular (and lucrative). Yet, 
+First, we can see that the bearing area is strictly increasing. This reinforce the idea that the industry has become more and more popular (and lucrative). Yet, the almond production doesn't always follow the trend. What's happening in those years? Are almond trees suddently extremely unproductive or those this show environmental problems?
 
+>California almond growers are once again being stung by a shortage of honeybees[^lack_bee]. _Los Angeles Times_, 2005
+
+The first **plateau from 2002-2005** is then due mostly to a lack of pollinators. The beekeeping community was overwhelmed and not all almond growers could find bees to work in their fields. As the demand was high, this made the price of pollinators skyrocket and many unconvinced beekeepers jumped on the migratory beekeeping train and new honeybee management practice have been introduced[^bee_practice].
+
+Problem solved, right? Not really, the production **dropped again in 2009** and has not been faring so well between **2011-2015**. Are the bees to blame _again_?! It turns out that weather is the main culprit this time. California was especially exposed to drought and there are many report of almond growers not beeing able to irriguate their orchards[^drought].
+
+As the state will surely experience more frequent and severe drought, there will be an impact on the almond agriculture. Almond growers need to continue working hand-in-hand with the beekeeping community and run experiments on new varieties of more resistant, less water-consuming trees to ensure its perenity[^almond_almanac].
 
 ## Bees-ness
 #### World-wide honey trade
