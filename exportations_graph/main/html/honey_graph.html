@@ -12,7 +12,7 @@ If you want more information, please check their wiki: https://github.com/humang
 
 
     <!--  -->
-    <!-- <link href="../../dist/lib/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="../../dist/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <style>
 
         /* Add Background pattern on the map */
@@ -93,41 +93,14 @@ If you want more information, please check their wiki: https://github.com/humang
 <body>
 
 <div class="container-fluid">
-
     <div class="row-fluid">
         <div id="map"></div>
-        <input type="range" min="0" max="2" value="1" class="slider" id="myRange">
-        <h2 id="background" name="story"
-                  rows="5" cols="33" class = "years">
-        </h2>
-
-        <h2 id="" name="left"
-            rows="5" cols="33" class = "yearstext">
-        1995
-        </h2>
-
-        </h2>
-
-        <h2 id="center" name="story" align="center"
-            rows="5" cols="33" class = "yearstext">
-            2005
-        </h2>
-
-        <h2 id="story" name="right" align="right"
-            rows="5" cols="33" class = "yearstext">
-            2017 
-        </h2>
-
-
     </div>
-
 </div>
 
-<script type="text/javascript" src="../../dist/js/jquery-1.9.1.min.js"></script>
 
+<script type="text/javascript" src="../../dist/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="../../dist/js/leaflet.js"></script>
-<link rel="stylesheet" href="../../dist/leaflet_fullscreen/Control.FullScreen.css" />
-<script src="../../dist/leaflet_fullscreen/Control.FullScreen.js"></script>
 <script src="../../dist/js/leaflet.markercluster.js"></script>
 <script type="text/javascript" src="../../dist/js/tile.stamen.js"></script>
 <script type="text/javascript" src="../data/countries.js"></script>
@@ -135,10 +108,7 @@ If you want more information, please check their wiki: https://github.com/humang
 <script type="text/javascript" src="../../dist/leaflet-dvf.js"></script>
 
 <script type="text/javascript">
-    var slider = document.getElementById("myRange");
-    var years = [1995, 2005, 2017];
-    var year = years[slider.value];
-    var flux = "e";
+
 
     /* Create the map*/
     $(document).ready(function () {
@@ -165,13 +135,8 @@ If you want more information, please check their wiki: https://github.com/humang
 
         /* Initialize the map by setting the map origin on the NAL*/
         map = L.map('map', {
-            minZoom: 2, maxBounds: bounds, maxZoom: 8
-        }
-        ).setView([46.518516, 6.561727], 4);
-
-        var fsControl = L.control.fullscreen();
-        // add fullscreen control to the map
-        map.addControl(fsControl);
+            minZoom: 2, maxBounds: bounds, maxZoom: 13
+        }).setView([46.518516, 6.561727], 4);
 
 
 
@@ -185,8 +150,8 @@ If you want more information, please check their wiki: https://github.com/humang
 
 // method that we will use to update the control based on feature properties passed
         info.update = function (props, value) {
-            this._div.innerHTML = '<h4>'+ (flux == "e" ? "Exportation" : "Importation") +' of honey</h4>' +  (props ?
-                '<b>' + props.name + '</b><br />' + value[flux+year.toString()] + ' tonnes'
+            this._div.innerHTML = '<h4>Exportation of honey</h4>' +  (props ?
+                '<b>' + props.name + '</b><br />' + value + ' tonnes'
                 : 'Hover over a country');
         };
 
@@ -205,31 +170,32 @@ If you want more information, please check their wiki: https://github.com/humang
         }
 
 
-        var legend1 = L.control({position: 'bottomleft'});
+        var legend = L.control({position: 'bottomleft'});
 
-        legend1.onAdd = function (map) {
-            this.div = L.DomUtil.create('div', 'info legend')
-            this.update();
-            return this.div;
-        };
+        legend.onAdd = function (map) {
 
-        legend1.update = function () {
-            var grades = [0, 1, 10, 100, 1000, 10000, 100000];
-            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exportation" : "Importation")+'<br>of honey<br>by country<br> in tonnes</h4></center>';
+            var div = L.DomUtil.create('div', 'info legend'),
+                grades = [0, 1, 10, 100, 1000, 10000, 100000],
+                labels = [];
+            div.innerHTML = '<center><h4>Exportation <br>of honey<br> in tonnes</h4></center>';
             // loop through our density intervals and generate a label with a colored square for each interval
             for (var i = 0; i < grades.length; i++) {
-                this.div.innerHTML +=
+                div.innerHTML +=
                     '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
                     grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
             }
+
+            return div;
         };
 
-        legend1.addTo(map);
+        legend.addTo(map);
+
+
+
 
         function style(feature) {
-
             return {
-                fillColor: getColor(feature.value[flux+year.toString()]),
+                fillColor: getColor(feature.value),
                 weight: 2,
                 opacity: 1,
                 dashArray: '3',
@@ -279,9 +245,20 @@ If you want more information, please check their wiki: https://github.com/humang
                 text: key,
                 center: latlng
             };
+//
+            //if (vertex) {
+            // //   var latlng = new L.LatLng(Number(vertex.lat), Number(vertex.lon));
+//
+            //    location = {
+            //        location: latlng,
+            //        text: key,
+            //        center: latlng
+            //    };
+            //}
 
             return location;
         };
+
 
         var maxCount = -1;
         var minCount = 100;
@@ -299,83 +276,6 @@ If you want more information, please check their wiki: https://github.com/humang
         maxCount /= 10;
         minCount;
 
-        function getArrowColor(d) {
-            return d > 10000 ? '#001969' :
-                    d > 5000  ? '#364286' :
-                        d > 2000  ? '#586da3' :
-                            d > 1000   ? '#789bc1' :
-                                d > 500   ? '#97cce0' :
-                                    d > 100   ? '#b7ffff' :
-                                        '#FFFFFF';
-        }
-
-        var legend2 = L.control({position: 'bottomright'});
-
-        legend2.onAdd = function (map) {
-            this.div = L.DomUtil.create('div', 'info legend')
-            this.update();
-            return this.div;
-        };
-
-        legend2.update = function () {
-            var grades = [100, 500, 1000, 2000, 5000, 10000];
-            this.div.innerHTML = '<center><h4>'+(flux == "e" ? "Exportation" : "Importation")+'<br>of honey<br>between countries<br>  in tonnes</h4></center>';
-            // loop through our density intervals and generate a label with a colored square for each interval
-            for (var i = 0; i < grades.length; i++) {
-                this.div.innerHTML +=
-                    '<i style="background:' + getArrowColor(grades[i] + 1) + '"></i> ' +
-                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-            }
-        };
-
-        legend2.addTo(map);
-
-        var control = L.control({position: 'topleft'});
-
-        control.onAdd = function (map) {
-
-            function test(x){alert(x)};
-
-            var div = L.DomUtil.create('div', 'info legend');
-            div.innerHTML = '<label class="container"><h4>Exportations</h4>\n' +
-                '    <input type="radio" id = "a" checked="checked" name="radio" onchange="test("2")">\n' +
-                '    <span class="checkmark"></span>\n' +
-                '</label>\n' +
-                '<label class="container"><h4>Importations</h4>\n' +
-                '    <input type="radio" id = "b" name="radio">\n' +
-                '    <span class="checkmark"></span>\n' +
-                '</label>';
-
-            return div;
-        };
-
-        control.addTo(map);
-
-        document.getElementById("a").addEventListener("click", flux_exp, false);
-        document.getElementById("b").addEventListener("click", flux_imp, false);
-
-        function change_flux(f) {
-            flux = f;
-            allLayer.options.includeLayer = function (newRecord) {
-                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year && newRecord.Value > 100: newRecord.to === country_name && newRecord.Year == year  && newRecord.Value > 100;
-            };
-            legend1.update();
-            legend2.update();
-            info.update();
-            allLayer.reloadData();
-            country_layer.setStyle(style)
-        }
-
-        function flux_exp() {
-            change_flux("e");
-            console.log(flux)
-            };
-
-        function flux_imp() {
-            change_flux("i");
-            console.log(flux)
-        }
-
         /* Handle the graphical options of the graph */
         var options = {
             recordsField: null,
@@ -389,7 +289,7 @@ If you want more information, please check their wiki: https://github.com/humang
                 return false;
             },
             getIndexKey: function (location, record) {
-                return record.from + '_' + record.to + '_' + record.Year;
+                return record.from + '_' + record.to;
             },
             // The link is green when the mouse is over.
             setHighlight: function (style) {
@@ -429,8 +329,10 @@ If you want more information, please check their wiki: https://github.com/humang
             },
             displayOptions: {
                 "Value" : {
-                    weight: 3,
-                    color: getArrowColor,
+                    weight: 2,
+                    color: new L.HSLHueFunction(new L.Point(minCount,0), new L.Point(maxCount,200), {
+                        outputLuminosity: '60%'
+                    }),
                 displayName: 'Exportations in tonnes (for arrows):'
             }},
             onEachRecord: function (layer, record) {
@@ -438,38 +340,23 @@ If you want more information, please check their wiki: https://github.com/humang
             }
         };
 
+        legendControl = new L.Control.Legend();
+
+        legendControl.addTo(map);
+
+
         // add the graph to the map
         var allLayer = new L.Graph(exportations, options);
         map.addLayer(allLayer);
 
-        country_layer = L.geoJson(countries, {
-            style: style,
-            onEachFeature: onEachFeature
-        });
-        country_layer.addTo(map);
-
-
-        var country_name = null;
-
-
-        slider.oninput = function() {
-            year = years[this.value];
-            allLayer.options.includeLayer = function (newRecord) {
-                console.log(flux)
-                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year && newRecord.Value > 100 : newRecord.to === country_name && newRecord.Year == year && newRecord.Value > 100;
-            };
-            allLayer.reloadData();
-            country_layer.setStyle(style)
-        }
 
         function links_creation(e) {
             var layer = e.target;
-            country_name = layer.feature.properties.name;
+
             allLayer.options.includeLayer = function (newRecord) {
-                return flux == "e" ? newRecord.from === country_name && newRecord.Year == year && newRecord.Value > 100 : newRecord.to === country_name && newRecord.Year == year && newRecord.Value > 100;
+                return newRecord.from === layer.feature.properties.name;
             };
             allLayer.reloadData();
-
         }
 
         function onEachFeature(feature, layer) {
@@ -479,6 +366,20 @@ If you want more information, please check their wiki: https://github.com/humang
                 click : links_creation
             });
         }
+
+        L.geoJson(countries, {
+            style: style,
+            onEachFeature: onEachFeature
+        }).addTo(map);
+
+
+
+
+
+
+
+
+
     });
 </script>
 </body>

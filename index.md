@@ -103,6 +103,8 @@ We observe that the world is split between honey producers and consumers. Wester
 
 Click on countries in order to see important links between them through years.
 
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="650" src="plot/beezness_plot.html"></iframe>
+
 We observed the same phenomenon mentioned above, namely the emergence of major exporters (India, Ukraine) but also the ever-increasing dependence of Western countries (France, United States) on these exporters.
 
 
