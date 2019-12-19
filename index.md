@@ -34,7 +34,7 @@ To do this, we gather [Varroa infestation data](https://quickstats.nass.usda.gov
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="550" src="plot/scatterplot_lack_of_correlation.html"></iframe>
 
-Unfortunately, the bees' decline does not have a single answer. They are dying regardless of how infected or poisoned by insecticides they are. But what about environmental stresses? Let's observe CCD from a geospatial perspective.
+Unfortunately, the lack of correlation shows that the bees' decline does not have a single answer. Even a combination of those factors doesn't suffice at explaining some catastrophical cases of CCD. They are dying regardless of how infected or poisoned by insecticides they are. But what about environmental stresses? Let's observe CCD from a geospatial perspective to explore this last important factor.
 
 ## Where are the bees dying? A US Case study
 #### Death, the American way
@@ -45,7 +45,7 @@ To do this, we use the data from Bee Informed Partnership (BIP) for the years 20
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="plot/yearly_loss_of_colonies_percent.html"></iframe>
 
-Clearly, in terms of the average death rate, all states are roughly equal: **Every year, roughly half of the bee population is decimated**, be it in California or Minnesota. But what about the raw counts? 
+Clearly, in terms of the average death rate, all states are roughly equal: it's a nation-wide problem. **Every year, roughly half of the bee population is decimated**, be it in California or Minnesota. But each state doesn't have the same bee population so what about the raw counts?
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="plot/yearly_loss_of_colonies_unit.html"></iframe>
 
