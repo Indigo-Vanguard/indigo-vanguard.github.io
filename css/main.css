@@ -788,6 +788,11 @@ pre {
   font-size: 16px;
 }
 
+.spoiler {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
 .sidenote {
   position: fixed;
   top: 40%;
