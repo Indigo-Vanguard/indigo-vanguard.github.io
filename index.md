@@ -148,7 +148,7 @@ As greedy industrials with no concerns for the economy keep dumping adulterated 
 
 <figure>
     <img src="img/Bee-hiding.jpg">
-    <figcaption>My people need you: support me <a href="https://freethebees.ch/en/">@FREETHEBEES</a>, a Swiss charity fighting for sustainable honey culture. Thank you for your engagement!</figcaption>
+    <figcaption>My people need you: support me <a href="https://freethebees.ch/en/">@FREETHEBEES</a>, a Swiss charity fighting for sustainable honey culture.<br />Thank you for your engagement!</figcaption>
 </figure>
 
 ## References
