@@ -125,7 +125,7 @@ We see that a few countries, e.g. India, are well under the average production. 
 </figure>
 </div>
 
-But we are still missing the elephant in the room. **China shows a strange behavior**. It starts in 1990 by being well into the plausible zone, but then slowly climbs out of it. From 2005 to 2017, the number of **beehives only increased by 10%**, where as its **honey production jumped by more than 80%**. Something fishy is happening here... Is this _hyper_-productivity phenomenon happening in other countries as well?
+But we are still missing the elephant in the room. **China shows a strange behavior**. It starts in 1990 by being well into the plausible zone, but then slowly climbs out of it. From 2005 to 2017, the number of **beehives only increased by 10%**, whereas its **honey production jumped by more than 80%**. Something fishy is happening here... Is this _hyper_-productivity phenomenon happening in other countries as well?
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="650" src="plot/honey_productivity.html"></iframe>
 
