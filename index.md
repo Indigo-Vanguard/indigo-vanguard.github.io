@@ -39,7 +39,7 @@ Unfortunately, the lack of correlation shows that the bees' decline does not hav
 ## Where are the bees dying? A US Case study
 #### Death, the American way
 
-We investigate the death-rate of colonies across the US, hoping to find clues as to where colonies mostly die. 
+We investigate the death-rate of colonies across the US, hoping to find clues as to where colonies mostly die.
 
 To do this, we use the data from Bee Informed Partnership (BIP) for the years 2010-2016.
 
@@ -125,7 +125,7 @@ We see that a few countries, e.g. India, are well under the average production. 
 </figure>
 </div>
 
-But we are still missing the elephant in the room. China shows a strange behavior. It starts in 1990 by being well into the average zone, but then slowly climbs out of it. From 2005 to 2017, the number of **beehives only increased by 10%**, where as its **honey production jumped by more than 80%**. Something fishy is happening here... Is this _hyper_-productivity phenomenon happening in other countries as well?
+But we are still missing the elephant in the room. China shows a strange behavior. It starts in 1990 by being well into the average zone, but then slowly climbs out of it. From 2005 to 2017, the number of **beehives only increased by 10%**, whereas its **honey production jumped by more than 80%**. Something fishy is happening here... Is this _hyper_-productivity phenomenon happening in other countries as well?
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="650" src="https://indigo-vanguard.github.io/plot/honey_productivity.html"></iframe>
 
