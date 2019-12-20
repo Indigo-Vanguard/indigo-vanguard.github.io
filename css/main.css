@@ -810,3 +810,12 @@ figcaption {
   text-align: center;
   font-size: 0.8em;
 }
+
+.footnotes > ol > li {
+  font-size: 1em;
+}
+
+.footnotes > ol > li > p {
+  font-size: inherit;
+  margin: 0.7em 0;
+}
