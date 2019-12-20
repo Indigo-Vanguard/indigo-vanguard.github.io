@@ -24,6 +24,7 @@ navbar-links:
   Resources:
     - FAO Statistics: "http://www.fao.org/faostat/en/"
     - USDA Statistics: "https://quickstats.nass.usda.gov/"
+    - BIP: "https://beeinformed.org/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
